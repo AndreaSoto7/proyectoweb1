@@ -1,0 +1,51 @@
+/* Estilos para la lista de cursos */
+#lista-cursos {
+    display: flex;
+    /* Organiza los cursos en una fila */
+    flex-wrap: wrap;
+    /* Permite que los cursos se ajusten a varias filas si es necesario */
+    justify-content: space-between;
+    /* Distribuye los cursos de forma equitativa */
+}
+
+/* Estilos para los contenedores de los cursos */
+.curso {
+    width: 300px;
+    /* Ancho de cada contenedor */
+    margin-bottom: 20px;
+    /* Margen inferior */
+    border: 1px solid #ccc;
+    /* Borde */
+    padding: 10px;
+    /* Espacio interno */
+    box-shadow: 2px 2px 5px #888888;
+    /* Sombra */
+}
+
+/* Estilos para las imágenes */
+.curso img {
+    width: 100%;
+    /* Ajustar la imagen al ancho del contenedor */
+    height: auto;
+    /* Ajustar la altura de la imagen de forma proporcional */
+    margin-bottom: 10px;
+    /* Margen inferior */
+}
+
+/* Estilos para los títulos */
+.curso h3 {
+    margin-top: 0;
+    /* Eliminar el margen superior del título */
+    font-size: 1.2em;
+    /* Tamaño de fuente */
+    font-weight: bold;
+    /* Fuente en negrita */
+}
+
+/* Estilos para las descripciones */
+.curso p {
+    font-size: 0.9em;
+    /* Tamaño de fuente */
+    line-height: 1.5;
+    /* Espacio entre líneas */
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef.Online</title>
+    <link rel="stylesheet" href="css/pagPrincipalSR.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="../script_pagPrincipalSR.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">CHEF.ONLINE</div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="pagPrincipalSR.html">INICIO</a></li>
+                    <li><a href="acercaDe.html">ACERCA DE</a></li>
+                    <li><a href="registro.html" class="user">REGISTRATE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>REGISTRATE YA!</h2>
+                <h1>CHEF.ONLINE</h1>
+                <p>REGISTRATE Y OBTEN LOS MEJORES CURSOS DE COCINA ONLINE GUIADOS CON CHEF PROFESIONALES Y CERTIFICADOS</p>
+                <div class="hero-buttons">
+                    <button class="btn-inicio" onclick="location.href='login.html'">INICIA SESION</button>
+                    <button class="btn-registro" onclick="location.href='registro.html'">REGISTRATE</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../img/chef.jpg" alt="Chef">
+            </div>
+        </section>
+
+        <section class="courses">
+            <h2>NUESTROS CURSOS MAS POPULARES</h2>
+            <p>En CHEF.ONLINE contamos con un gran listado de cursos diseñado especialmente para ti, donde aprenderás a crear distintas preparaciones desde 0.</p>
+            <div id="course-list" class="course-list">
+                <!-- Los cursos se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+}
+
+.course-overview h1{
+    font-size: 40px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    border: 1px solid rgb(48, 157, 193); 
+    border-radius: 20px; 
+    overflow: hidden; 
+}
+
+.search-container input[type="text"] {
+    border: none;
+    padding: 5px;
+    width: 150px; 
+    outline: none; 
+}
+
+.search-container button {
+    background-color: rgb(48, 157, 193); 
+    color: white; 
+    border: none;
+    padding: 5px 10px;
+}
+
+.search-container button:hover {
+    background-color: rgb(36, 118, 145);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(48, 157, 193);
+}
+
+nav .user {
+    font-weight: bold;
+    background-color: rgb(245, 195, 98);
+    color: rgb(25, 13, 48);
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.course-overview {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.course-overview h1 {
+    margin-bottom: 1rem;
+    color: rgb(7, 21, 47);
+}
+
+.course-overview img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.course-overview p {
+    margin: 1rem 0;
+    color: #555;
+    
+}
+
+.course-overview button {
+    display: block; 
+    margin: 10px auto; 
+}
+
+.btn-matricularse, .btn-desmatricularse {
+    background-color: rgb(217, 217, 217); 
+    color: rgb(0, 0, 0);
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+.lessons {
+    padding: 0 15px;
+}
+
+.lessons h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(7, 21, 47);
+}
+
+.lesson-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 30px;
+}
+
+.lesson-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.lesson-info{
+    padding-left: 20px;
+}
+
+.lesson-info h3, .minutos {
+    color: #333;
+}
+
+.percentage {
+    display: block;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    display: block;
+    height: 10px;
+    background-color: #ddd;
+    margin-top: 5px;
+    width: 250px; 
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(112, 112, 112);
+    width: 80%; 
+}
+
+.minutos{
+padding: 0;
+}
+
+.course-overview p{
+    padding: 0 200px;
+}
+
+@media (max-width: 768px) {
+    .logo{
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .container{
+        flex-direction: column;
+        font-size: 20px;
+    }
+    
+    .courses-grid {
+        padding: 10px;
+     
+    }
+
+    .search-container{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 426px) {
+    .container, nav ul, .lesson-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container, .lesson-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo, nav ul, .lesson-info {
+        margin: 0 auto;
+        padding: 20px; 
+    }
+
+    nav {
+        width: 200px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        border: 2px solid rgb(48, 157, 193);
+        border-radius: 15px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    nav a, nav .user {
+        color: #000;
+        text-decoration: none;
+        display: block;
+        font-size: 14px;
+    }
+
+    .course-overview p, .lesson-info h3, .minutos {
+        padding: 0;
+        font-size: 16px; 
+    }
+
+    .lesson-item img {
+        width: 100%;
+        height: 200px; 
+    }
+
+    .lesson-info {
+        padding: 0 20px;
+    }
+
+    .search-container{
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="stylesheet" href="css/administradorCurso.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">CHEF.ONLINE</div>
+            <nav>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">CURSOS</a></li>
+                    <li><a href="#">ACERCA DE</a></li>
+                    <li><a href="#" class="user">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Panel de Administrador</h1>
+        <button class="new-course" onclick="location.href='editarCurso.html'">Nuevo Curso</button>
+        <div id="course-grid" class="course-grid">
+            <!-- Aquí se cargarán los cursos desde el backend -->
+        </div>
+    </main>
+    <script src="../cursosAdmin.js"></script>
+</body>
+</html>

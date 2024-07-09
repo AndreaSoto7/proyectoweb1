@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario - CURSO.ONLINE</title>
+  <link rel="stylesheet" href="css/registroUsuario.css">
+  <script src="..\script_registro.js" defer></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Te damos la bienvenida<br>a <span>CURSO.ONLINE</span></h1>
+      <p>Encuentra el curso que necesitas</p>
+      <h2>CREA TU CUENTA</h2>
+      <form id="registerForm">
+        <div class="input-group">
+          <div class="input-item">
+            <label for="first-name">Nombre</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Nombre">          
+          </div>
+          <div class="input-item">
+            <label for="last-name">Apellido</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Apellido">
+          </div>
+        </div>
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Contraseña">
+        <button type="submit">REGISTRAR</button>
+      </form>
+      <p id="feedbackMessage"></p>
+    </div>
+  </div>
+</body>
+</html>

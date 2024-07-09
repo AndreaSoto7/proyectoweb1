@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+}
+
+.course-overview h1{
+    font-size: 40px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    border: 1px solid rgb(48, 157, 193); 
+    border-radius: 20px; 
+    overflow: hidden; 
+}
+
+.search-container input[type="text"] {
+    border: none;
+    padding: 5px;
+    width: 150px; 
+    outline: none; 
+}
+
+.search-container button {
+    background-color: rgb(48, 157, 193); 
+    color: white; 
+    border: none;
+    padding: 5px 10px;
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(48, 157, 193);
+}
+
+nav .user {
+    font-weight: bold;
+    background-color: rgb(245, 195, 98);
+    color: rgb(25, 13, 48);
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.login-button {
+    background-color: rgb(245, 195, 98);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hero-text p{
+padding: 0 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2, .hero-text h1 {
+    margin: 10px 0;
+}
+
+.btn-registro{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(71, 168, 200) ;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-inicio {
+    background-color: rgb(245, 195, 98);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.courses {
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+    padding: 20px;
+}
+
+.courses h2 {
+    margin-top: 0;
+    color: rgb(7, 21, 47);
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: start; 
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    text-align: center;
+    overflow: hidden; 
+    width: 400px;
+}
+
+.course-item img {
+    height: 200px;
+    width: 100%; 
+    object-fit: cover; 
+}
+
+.view-more {
+    background-color: rgb(245, 195, 98);
+    color: rgb(29, 16, 49);
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.btn-inf {
+    background-color: #ffffff;
+    border: 1px solid rgb(71, 168, 200) ;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .logo{
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .container{
+        flex-direction: column;
+        font-size: 20px;
+    }
+    
+    .courses-grid {
+        padding: 10px;
+     
+    }
+
+    .search-container{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 426px) {
+    .hero{
+        display: block;
+    }
+
+    .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li {
+        border: 2px solid #007BFF;;
+        padding: 10px;
+        margin: 5px 0; 
+    }
+
+    nav a {
+        color: #000;
+        text-decoration: none; 
+        display: block; 
+    }
+
+    .courses h2, h1 {
+
+        font-size: 30px;
+       
+    }
+}

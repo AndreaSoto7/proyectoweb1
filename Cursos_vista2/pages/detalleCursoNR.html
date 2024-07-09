@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Curso</title>
+    <link rel="stylesheet" href="css/detalleCursoNR.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="../detalleCursoNR.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">CHEF.ONLINE</div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar..." name="search">
+                <button type="submit"></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="detalleCursoNR.html">INICIO</a></li>
+                    <li><a href="acercaDe.html">ACERCA DE</a></li>
+                    <li><a href="registro.html" class="user">REGISTRATE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="course-overview">
+            <h1 id="course-title">Título del Curso</h1>
+            <img id="course-image" src="" alt="Imagen del Curso">
+            <p id="course-description">Descripción del Curso</p>
+            <p class="note"><span class="fa fa-lock"></span> Debes estar registrado para poder acceder a este curso</p>
+        </section>
+        
+        <section class="lessons">
+            <h2>Lecciones</h2>
+            <div class="lesson-list" id="lesson-list">
+                <!-- Las lecciones se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>

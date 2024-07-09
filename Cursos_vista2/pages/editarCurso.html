@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Curso</title>
+    <link rel="stylesheet" href="css/editarCurso.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">CHEF.ONLINE</div>
+            <nav>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="misCursos.html">CURSOS</a></li>
+                    <li><a href="acercaDe.html">ACERCA DE</a></li>
+                    <li><a href="#" class="user">ADMIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="edit-course">
+            <h1>EDITAR CURSO</h1>
+            <div class="upload-image">
+                <label for="upload-image"><i class="fa fa-upload"></i> Subir imagen</label>
+                <input type="file" id="upload-image">
+            </div>
+            <div class="course-details">
+                <input type="text" id="course-name" placeholder="Nombre del Curso">
+                <textarea id="course-description" placeholder="Descripción"></textarea>
+            </div>
+            <button class="add-lesson">Añadir Lección</button>
+            <div class="lessons">
+                <h2>LECCIONES</h2>
+                <!-- Aquí se añadirán dinámicamente las lecciones -->
+            </div>
+            <div class="actions">
+                <button class="cancel" onclick="location.href='administradorCurso.html'">Cancelar</button>
+                <button class="save" onclick="guardarCurso()">Guardar</button>
+            </div>
+        </section>
+    </main>
+    <script src="../editarCurso.js"></script>
+</body>
+</html>
