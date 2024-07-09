@@ -1,0 +1,843 @@
+{
+	"info": {
+		"_postman_id": "f395e0cb-fa2e-482b-bbf8-bf3266e2d6b4",
+		"name": "Plataforma de Cursos Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35986267"
+	},
+	"item": [
+		{
+			"name": "auth Copy",
+			"item": [
+				{
+					"name": "get token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"qwe@gmail.com\",\r\n    \"password\": \"qwe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNjE3MDM4MCwiaWF0IjoxNzE2MDgzOTgwLCJqdGkiOiJjNjM4MWJmMzc3Y2Y0M2E5YTQzYzI0NDIyOWI3NzM3ZiIsInVzZXJfaWQiOjF9.Tx3eKVI_eDLTa3aA1h6ES7JcMsXyc9IhhCQi2Cpkuzc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user Copy",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Andrea\",\r\n    \"last_name\": \"Soto\",\r\n    \"username\": \"andrea\",\r\n    \"email\": \"andrea@andrea.com\",\r\n    \"password\": \"Andrea123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "list cursos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwOTA2MTY5LCJpYXQiOjE3MjA1NjA1NjksImp0aSI6ImU2OTEzZTA3ZDI3MzQ5MjY4MzU0ZWI2ZDE1MGNmYzhlIiwidXNlcl9pZCI6MTF9.zx5_v-_9klAjVjybuZEVv8G6_9snBKbv1y9VKOaWqF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/cursos/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbycurso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user/cursos/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"cursos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cursos de un usario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user/cursos/2/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"cursos",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create curso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwOTA2MTY5LCJpYXQiOjE3MjA1NjA1NjksImp0aSI6ImU2OTEzZTA3ZDI3MzQ5MjY4MzU0ZWI2ZDE1MGNmYzhlIiwidXNlcl9pZCI6MTF9.zx5_v-_9klAjVjybuZEVv8G6_9snBKbv1y9VKOaWqF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Repostería desde cero\",\r\n        \"descripcion\": \"Curso básico de repostería que te enseña desde cero a preparar\",\r\n        \"imagen\": \"https://gastronomicainternacional.com/wp-content/uploads/2020/05/tecnicas-de-reposteria-2-1024x576.jpg\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/cursos/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar curso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzc5MjQ3LCJpYXQiOjE3MjAwMzM2NDcsImp0aSI6IjE3Mjc3ZmNmNGFiODQ3ZTE4MTQ5ODlmOWQ2Y2QyMDA3IiwidXNlcl9pZCI6OX0.k8ZggRarqF7VgSerrTMsWzuFAgIF1uJbuIEy2XB9BGA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Diplomado en Cocina Internacional\",\r\n        \"descripcion\": \"Este curso te dará una base sólida en los principios y técnicas de la cocina internacional. Aprenderás a preparar platos de diferentes países y culturas, utilizando ingredientes frescos y de temporada.\",\r\n        \"imagen\": \"https://web.pcs-internacional.com/wp-content/uploads/2020/07/COCINA-INTER-ONLINE-99.png\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/cursos/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cursos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar curso",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Programacion 2\",\r\n        \"descripcion\": \"Este es un curso de continuación a la programación 2\",\r\n        \"imagen\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.IEEbakBrlqDi8yI_jmsKqAHaEe%26pid%3DApi&f=1&ipt=ec41ff73bcff431de3b061f107285fc921ce9d266ec6d3b74352728708368529&ipo=images\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/cursos/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cursos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lecciones",
+			"item": [
+				{
+					"name": "list lecciones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzc5MjQ3LCJpYXQiOjE3MjAwMzM2NDcsImp0aSI6IjE3Mjc3ZmNmNGFiODQ3ZTE4MTQ5ODlmOWQ2Y2QyMDA3IiwidXNlcl9pZCI6OX0.k8ZggRarqF7VgSerrTMsWzuFAgIF1uJbuIEy2XB9BGA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/lecciones/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lecciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyleccion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user/cursos/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"cursos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create leccion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIwMzc5MjQ3LCJpYXQiOjE3MjAwMzM2NDcsImp0aSI6IjE3Mjc3ZmNmNGFiODQ3ZTE4MTQ5ODlmOWQ2Y2QyMDA3IiwidXNlcl9pZCI6OX0.k8ZggRarqF7VgSerrTMsWzuFAgIF1uJbuIEy2XB9BGA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Java\",\r\n        \"tipo_leccion\": \"Aprendiendo Java\",\r\n        \"imagen\": \"https://formadoresit.es/wp-content/uploads/2018/06/logo_java.png\",\r\n        \"idCurso\":2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/lecciones/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lecciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar leccion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Estructura de codigo 2\",\r\n        \"tipo_leccion\": \"Esta es una leccion curso del  curso\",\r\n        \"imagen\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.IEEbakBrlqDi8yI_jmsKqAHaEe%26pid%3DApi&f=1&ipt=ec41ff73bcff431de3b061f107285fc921ce9d266ec6d3b74352728708368529&ipo=images\",\r\n        \"idCurso\":2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/lecciones/2/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lecciones",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar leccion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Programacion 2\",\r\n        \"descripcion\": \"Este es un curso de continuación a la programación 2\",\r\n        \"imagen\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.IEEbakBrlqDi8yI_jmsKqAHaEe%26pid%3DApi&f=1&ipt=ec41ff73bcff431de3b061f107285fc921ce9d266ec6d3b74352728708368529&ipo=images\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/lecciones/2/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lecciones",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerleccionporCurso",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Avance",
+			"item": [
+				{
+					"name": "list avance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/avance/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"avance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyavance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/avance/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"avance",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create avance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idUser\": 2,\r\n        \"idLeccion\": 2,\r\n        \"avance\": 0.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/avance/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"avance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar avance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idUser\": 2,\r\n        \"idLeccion\": 2,\r\n        \"avance\": 0.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/avance/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"avance",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar avance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"Programacion 2\",\r\n        \"descripcion\": \"Este es un curso de continuación a la programación 2\",\r\n        \"imagen\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.IEEbakBrlqDi8yI_jmsKqAHaEe%26pid%3DApi&f=1&ipt=ec41ff73bcff431de3b061f107285fc921ce9d266ec6d3b74352728708368529&ipo=images\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/avance/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"avance",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matriculacion",
+			"item": [
+				{
+					"name": "create matriculacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idUser\": 2,\r\n        \"idCurso\": 4\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/matriculacion/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"matriculacion",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete matriculacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/cursos/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cursos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista matriculacion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/cursos/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit matriculacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjAxMjU0LCJpYXQiOjE3MTkyNTU2NTQsImp0aSI6IjZlMzg0MTA4YTY5YTQyOTI4Y2RkMThmMjc4YWM5MDA3IiwidXNlcl9pZCI6Mn0.uJM7U_u1tTLeEqlgxjh_h81f5160ucMuQN1dCo9cs6o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idUser\": 2,\r\n        \"idCurso\": 4\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/cursos/1/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cursos",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
